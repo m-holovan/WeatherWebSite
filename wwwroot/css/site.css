@@ -1,0 +1,21 @@
+.custom-bg {
+    background: url('/img/jpeg/bg.jpg') no-repeat center top / cover;
+    height: 1000px;
+}
+
+body {
+    font-family: 'Belanosima', sans-serif;
+}
+
+input {
+    border-radius: 10px;
+    float: right;
+}
+
+.button {
+    margin: 0 auto;
+    display: block;
+    width: 200px;
+    height: 45px;
+    border-radius: 10px;
+}

@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model Root
+
+
+<div class="row text-center justify-content-center pt-5 weather-class">
+    @{
+        if (Model != null)
+        {
+            <h1 class="text-center">Weather for @Model.city_name</h1>
+            @for (int i = 0; i < 8; i++)
+            {
+                <div class="col-lg-3 col-sm-12 mt-5">
+                    <p class="date">@Model.data[i].datetime</p>
+                    <img src="@Model.imgName[i]" />
+                    <p class="temp">Max temp: @Model.data[i].max_temp</p>
+                    <p class="temp">Min temp: @Model.data[i].min_temp</p>
+                    <p>@Model.data[i].weather.description</p>
+                </div>
+            }
+        }
+        else
+        {
+            <h1>If you want to see the weather, please enter the name of the city</h1>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-sm-12">
+                     <img src="~/img/png/a01d.png" />               
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                    <img src="~/img/png/t01d.png" />
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                     <img src="~/img/png/t04d.png" />               
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                    <img src="~/img/png/c03d.png" />
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                    <img src="~/img/png/c01d.png" />
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                    <img src="~/img/png/c02d.png" />
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                    <img src="~/img/png/c04d.png" />
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                    <img src="~/img/png/r01d.png" />
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                    <img src="~/img/png/a01d.png" />
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                    <img src="~/img/png/t01d.png" />
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                    <img src="~/img/png/t04d.png" />
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                    <img src="~/img/png/c03d.png" />
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                    <img src="~/img/png/c01d.png" />
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                    <img src="~/img/png/c02d.png" />
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                    <img src="~/img/png/c04d.png" />
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                    <img src="~/img/png/r01d.png" />
+                </div>
+            </div>
+        }
+    }
+</div>
