@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WeatherApplication.styles.css" asp-append-version="true" />
 
-    
+
 
 </head>
 
@@ -41,9 +41,14 @@
                         <li class="nav-item">
                             <a class="nav-link active" asp-action="About" asp-controller="Home">About us</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" asp-action="Login" asp-controller="Account">Login</a>
-                        </li>
+                        @{
+                            if (!User.Identity.IsAuthenticated)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link active" asp-action="Login" asp-controller="Account">Login</a>
+                                </li>
+                            }
+                        }
                         @{
                             if (User.Identity.IsAuthenticated)
                             {
