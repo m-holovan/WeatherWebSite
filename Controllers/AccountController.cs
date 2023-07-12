@@ -10,7 +10,11 @@ namespace WeatherApplication.Controllers
 
         [HttpPost]
         public IActionResult Register(RegisterModel model) => View(model);
-        
+
+        [HttpGet]
         public IActionResult Login() => View();
+
+        [HttpPost]
+        public IActionResult Login(LoginModel model) => View(model);
     }
 }
