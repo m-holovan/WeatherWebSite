@@ -44,6 +44,14 @@
                         <li class="nav-item">
                             <a class="nav-link active" asp-action="Login" asp-controller="Account">Login</a>
                         </li>
+                        @{
+                            if (User.Identity.IsAuthenticated)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link active" asp-action="Logout" asp-controller="Account">Logout</a>
+                                </li>
+                            }
+                        }
                     </ul>
                     <form class="d-flex my-2 my-lg-0" asp-action="Index" asp-controller="Home">
                         <input class="form-control me-sm-2" type="text" placeholder="Enter name of the city" name="city">
