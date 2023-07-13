@@ -2,7 +2,7 @@
 
 <div class="d-flex justify-content-center align-items-center mt-5">
     <div asp-validation-summary="All">
-        <h1>LOGIN</h1>
+        <h1 class="text-center">LOGIN</h1>
         <form asp-action="Login" asp-controller="Account" method="post">
 
             <label asp-for="Email" class="mb-3">Email:</label>
@@ -11,10 +11,12 @@
             <label asp-for="Password" class="mb-3">Password:</label>
             <input type="password" asp-for="Password" /><br />
 
-            <button class="button" type="submit">Submit</button>
+            <button class="btn btn-outline-dark button" type="submit">Submit</button>
         </form>
 
-        <p>Don`t have an account?</p>
-        <a asp-action="Register" asp-controller="Account">Register</a>
+        <div class="text-center mt-5">
+            <p>Don`t have an account?</p>
+            <a asp-action="Register" asp-controller="Account">Register</a>
+        </div>
     </div>
 </div>
