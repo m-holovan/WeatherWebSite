@@ -8,15 +8,20 @@
 <div class="row text-center justify-content-center pt-5">
 
     <div class="col-lg-3 col-sm-12 mt-5">
-        <h1>Weather for @Model.city_name</h1>
+        <h1>Weather for @dayOfTheWeek</h1>
         <p>@Model.data[id].datetime</p>
-        <p>@dayOfTheWeek</p>
         <img src="/@Model.imgName[id]">
         <p>Wind speed: @Model.data[id].wind_spd m/s</p>
         <p>Average Temperature: @Model.data[id].temp</p>
         <p>Probability of Precipitation: @Model.data[id].pop</p>
         <p>Sunrise time: @Model.data[id].sunrise_ts</p>
         <p>Sunset time: @Model.data[id].sunset_ts</p>
+        <p>Average total cloud coverage: @Model.data[id].clouds %</p>
+        <p>Average Ozone: @Model.data[id].ozone</p>
+        <p>Moon phase illumination fraction<br />
+            (0 = New moon, 0.50 = Full Moon, <br /> 
+            0.75 = Last quarter moon):
+            @Model.data[id].moon_phase</p>
         <form asp-action="Index" asp-controller="Home" method="post">
             <button class="btn btn-outline-dark" asp-route-city="@Model.city_name" asp-action="Index" type="submit">Back</button>
         </form>

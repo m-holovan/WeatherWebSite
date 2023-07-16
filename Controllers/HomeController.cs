@@ -40,7 +40,5 @@ namespace WeatherApplication.Controllers
 
             return View(deserializer.Deserialize(city));
         }
-
-        public IActionResult Back() => RedirectToAction("Index");
     }
 }
