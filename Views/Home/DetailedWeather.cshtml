@@ -17,6 +17,8 @@
         <p>Probability of Precipitation: @Model.data[id].pop</p>
         <p>Sunrise time: @Model.data[id].sunrise_ts</p>
         <p>Sunset time: @Model.data[id].sunset_ts</p>
-        <a class="btn btn-outline-dark" asp-action="Back" asp-controller="Home">Back</a>
+        <form asp-action="Index" asp-controller="Home" method="post">
+            <button class="btn btn-outline-dark" asp-route-city="@Model.city_name" asp-action="Index" type="submit">Back</button>
+        </form>
     </div>
 </div>

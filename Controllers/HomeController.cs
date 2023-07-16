@@ -30,7 +30,7 @@ namespace WeatherApplication.Controllers
         [HttpGet]
         public IActionResult About() => View();
 
-
+        [HttpGet]
         public IActionResult DetailedWeather(int id, string city, string date)
         {
             ViewData["id"] = id;
@@ -40,5 +40,7 @@ namespace WeatherApplication.Controllers
 
             return View(deserializer.Deserialize(city));
         }
+
+        public IActionResult Back() => RedirectToAction("Index");
     }
 }
