@@ -18,7 +18,10 @@
                     <p class="temp">Max temp: @Model.data[i].max_temp</p>
                     <p class="temp">Min temp: @Model.data[i].min_temp</p>
                     <p>@Model.data[i].weather.description</p>
-                    <button class="btn btn-outline-dark" type="submit">Details</button>
+
+                    <button class="btn btn-outline-dark" type="submit">
+                        <a asp-action="DetailedWeather" asp-controller="Home" asp-route-id="@i" asp-route-city="@Model.city_name" asp-route-date="@Model.data[i].datetime">Details</a>
+                    </button>
                 </div>
             }
         }
@@ -27,13 +30,13 @@
             <h1>If you want to see the weather, please enter the name of the city</h1>
             <div class="row justify-content-center">
                 <div class="col-lg-3 col-sm-12">
-                     <img src="~/img/png/a01d.png" />               
+                    <img src="~/img/png/a01d.png" />
                 </div>
                 <div class="col-lg-3 col-sm-12">
                     <img src="~/img/png/t01d.png" />
                 </div>
                 <div class="col-lg-3 col-sm-12">
-                     <img src="~/img/png/t04d.png" />               
+                    <img src="~/img/png/t04d.png" />
                 </div>
                 <div class="col-lg-3 col-sm-12">
                     <img src="~/img/png/c03d.png" />

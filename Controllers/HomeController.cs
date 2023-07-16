@@ -29,5 +29,16 @@ namespace WeatherApplication.Controllers
 
         [HttpGet]
         public IActionResult About() => View();
+
+
+        public IActionResult DetailedWeather(int id, string city, string date)
+        {
+            ViewData["id"] = id;
+            ViewData["date"] = DateHelper.GetDayOfWeek(date);
+
+            Deserializer deserializer = new Deserializer();
+
+            return View(deserializer.Deserialize(city));
+        }
     }
 }
