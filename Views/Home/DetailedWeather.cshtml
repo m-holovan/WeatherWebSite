@@ -12,5 +12,11 @@
         <p>@Model.data[id].datetime</p>
         <p>@dayOfTheWeek</p>
         <img src="/@Model.imgName[id]">
+        <p>Wind speed: @Model.data[id].wind_spd m/s</p>
+        <p>Average Temperature: @Model.data[id].temp</p>
+        <p>Probability of Precipitation: @Model.data[id].pop</p>
+        <p>Sunrise time: @Model.data[id].sunrise_ts</p>
+        <p>Sunset time: @Model.data[id].sunset_ts</p>
+        <a class="btn btn-outline-dark" asp-action="Back" asp-controller="Home">Back</a>
     </div>
 </div>

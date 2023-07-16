@@ -19,9 +19,7 @@
                     <p class="temp">Min temp: @Model.data[i].min_temp</p>
                     <p>@Model.data[i].weather.description</p>
 
-                    <button class="btn btn-outline-dark" type="submit">
-                        <a asp-action="DetailedWeather" asp-controller="Home" asp-route-id="@i" asp-route-city="@Model.city_name" asp-route-date="@Model.data[i].datetime">Details</a>
-                    </button>
+                    <a class="btn btn-outline-dark" asp-action="DetailedWeather" asp-controller="Home" asp-route-id="@i" asp-route-city="@Model.city_name" asp-route-date="@Model.data[i].datetime">Details</a>
                 </div>
             }
         }
